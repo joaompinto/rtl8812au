@@ -78,6 +78,12 @@ Eventually remove from DKMS with:
 $ sudo dkms remove -m 8812au -v 4.2.2 --all
 ```
 
+### CentOS 7
+sudo cp 8812au.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/realtek
+sudo yum install wireless-tools
+wpa_passphrase wirelssNetName wirelessPassord > wpa1.conf
+sudo sh runwpa
+
 ### References
 
 - D-Link DWA-171
